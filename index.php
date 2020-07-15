@@ -1,14 +1,35 @@
 <?php
     include_once "header.php";
+    require_once 'conn/koneksi.php';
 ?>
 <!-- Body -->
 <div style="margin-top:25px" class="container">
+<?php
+if(isset($_GET['cari'])){
+    $cari = $_GET['cari'];
+    $data = mysqli_query($koneksi,"SELECT * FROM ref_kendaraan WHERE nm_kendaraan LIKE '%".$cari."%'");				
+}else{
+    $data = mysqli_query($koneksi,"SELECT * FROM ref_kendaraan");
+    $cari = '';
+}
+$row = $data ? mysqli_num_rows($data) : 0;
+?>
+<div class="col-md-13">
+        <div class="card">
+            <div class="card-body">
+                <form action="index.php" method="get">
+                    <input type="submit" value="Cari">
+                    <input type="text" name="cari" style="width:95%">
+                </form>
+                <?php if($cari){ ?>
+                    <h3>Hasil pencarian dari : <?= $cari ?></h3>
+                <?php }else{} ?>
+            </div>
+        </div>
+    </div>
 <div class="row">
+    
     <?php
-        require_once 'conn/koneksi.php';
-        $data = mysqli_query($koneksi,"SELECT * FROM ref_kendaraan");
-        $row = mysqli_num_rows($data);
-
         if($row > 0){
         foreach($data as $kendaraan){
     ?>
@@ -39,7 +60,13 @@
         </div>
     </div>
     <?php }
-}?>
+}else{?>
+        <div class="col-md-12">
+            <div class="card mt-5 align-center">
+                <div class="card-body">NOT FOUND</div>
+            </div>
+        </div>
+<?php } ?>
 </div>
 </div>
 <?php 

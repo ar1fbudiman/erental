@@ -13,7 +13,8 @@
         </div>
     </div>
     <div class="card-body">
-    <table class="table table-bordered">
+    <a href="cetak-diterima.php" class="btn btn-success">Cetak Laporan</a>
+    <table class="table table-bordered mt-3">
         <thead>
             <tr>
                 <th>#</th>

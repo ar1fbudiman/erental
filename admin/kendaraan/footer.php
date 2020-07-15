@@ -3,7 +3,7 @@
     </section><!-- /.content -->
   </div><!-- /.content-wrapper -->
 <footer class="main-footer">
-    <strong>Copyright &copy; 2019 Kelompok -5</strong>
+    <strong>Copyright &copy; 2020 Anggia Nikita Hutabarat</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Thanks to</b> <a href="http://adminlte.io">AdminLTE.io</a>

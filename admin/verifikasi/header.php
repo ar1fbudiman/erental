@@ -91,6 +91,25 @@
                 </p>
                 </a>
             </li>
+          <li class="nav-header">LIST</li>
+            <li class="nav-item">
+                <a href="../pembayaran_diterima.php" class="nav-link">
+                <!-- <i class="nav-icon far fa-sign-out" aria-hidden="true"></i> -->
+              <i class="nav-icon fa fa-check"></i>
+                <p>
+                    List Pembayaran DiTerima
+                </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="../pembayaran_ditolak.php" class="nav-link">
+                <!-- <i class="nav-icon far fa-sign-out" aria-hidden="true"></i> -->
+              <i class="nav-icon fa fa-times"></i>
+                <p>
+                    List Pembayaran DiTolak
+                </p>
+                </a>
+            </li>
           <li class="nav-header">KELUAR</li>
             <li class="nav-item">
                 <a href="../logout.php" class="nav-link">
